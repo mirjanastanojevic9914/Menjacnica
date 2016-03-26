@@ -22,10 +22,10 @@ public class Menjacnica implements MenjacnicaInterfejs {
 		for (int i = 0; i < valute.size(); i++) {
 
 			if (valute.get(i).equals(val)) {
-				if (!valute.get(i).getKursevi().contains(k)) {
-					valute.get(i).getKursevi().add(k);
-					break;
-				}
+
+				valute.get(i).getKursevi().add(k);
+				break;
+
 			}
 		}
 

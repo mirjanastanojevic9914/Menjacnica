@@ -14,6 +14,10 @@ public class Valuta {
 	}
 
 	public void setNaziv(String naziv) {
+		if (naziv == null || naziv.isEmpty()) {
+			throw new RuntimeException(
+					"Naziv ne moze biti null ili prazan string.");
+		}
 		this.naziv = naziv;
 	}
 
@@ -22,6 +26,10 @@ public class Valuta {
 	}
 
 	public void setSkraceniNaziv(String skraceniNaziv) {
+		if (skraceniNaziv == null || skraceniNaziv.isEmpty()) {
+			throw new RuntimeException(
+					"Skraceni naziv ne moze biti null ili prazan string.");
+		}
 		this.skraceniNaziv = skraceniNaziv;
 	}
 
@@ -30,6 +38,9 @@ public class Valuta {
 	}
 
 	public void setKursevi(LinkedList<Kurs> kursevi) {
+		if (kursevi == null) {
+			throw new RuntimeException("Lista kursevi ne moze biti null.");
+		}
 		this.kursevi = kursevi;
 	}
 
@@ -76,6 +87,5 @@ public class Valuta {
 		return "Valuta [naziv=" + naziv + ", skraceniNaziv=" + skraceniNaziv
 				+ ", kursevi=" + kursevi + "]";
 	}
-	
 
 }

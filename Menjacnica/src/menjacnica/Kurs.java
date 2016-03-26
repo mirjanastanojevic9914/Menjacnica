@@ -14,6 +14,10 @@ public class Kurs {
 	}
 
 	public void setProdajniKurs(double prodajniKurs) {
+		if (prodajniKurs <= 0) {
+			throw new RuntimeException(
+					"Kurs ne moze biti jednak 0 ili manji od 0.");
+		}
 		this.prodajniKurs = prodajniKurs;
 	}
 
@@ -22,6 +26,10 @@ public class Kurs {
 	}
 
 	public void setSrednjiKurs(double srednjiKurs) {
+		if (prodajniKurs <= 0) {
+			throw new RuntimeException(
+					"Kurs ne moze biti jednak 0 ili manji od 0.");
+		}
 		this.srednjiKurs = srednjiKurs;
 	}
 
@@ -30,6 +38,10 @@ public class Kurs {
 	}
 
 	public void setKupovniKurs(double kupovniKurs) {
+		if (prodajniKurs <= 0) {
+			throw new RuntimeException(
+					"Kurs ne moze biti jednak 0 ili manji od 0.");
+		}
 		this.kupovniKurs = kupovniKurs;
 	}
 
@@ -38,6 +50,9 @@ public class Kurs {
 	}
 
 	public void setDatum(GregorianCalendar datum) {
+		if (datum == null) {
+			throw new RuntimeException("Datum ne moze biti null.");
+		}
 		this.datum = datum;
 	}
 
@@ -88,5 +103,5 @@ public class Kurs {
 				+ srednjiKurs + ", kupovniKurs=" + kupovniKurs + ", datum="
 				+ datum + "]";
 	}
-    
+
 }
